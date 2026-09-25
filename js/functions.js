@@ -9,7 +9,10 @@ function getStudent(id){
 };
 function addStudent(){
     let focusInput = registerForm.querySelector("input:focus");
-    focusInput?.blur();
+    if (focusInput) {
+    focusInput.blur();
+}
+
     let invalidInput = registerForm.querySelector("input.is-invalid"),
         InvalidInput = registerForm.querySelector("input[data-valid='false']");
     if (invalidInput !== null || InvalidInput !== null){
